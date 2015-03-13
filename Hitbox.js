@@ -55,12 +55,12 @@ Hitbox.prototype.attackenemy = function () {
             (this.attackbox.height + this.attackbox.y > ent.myboxes.hitbox.y)) {
             
             if (ent.blockLeft || ent.blockRight) {
-                damage = .5;
+                damage = 1;
             }
             if (ent2.weak_punch || ent2.weak_kick) {
-                damage *= 4;
-            } else {
                 damage *= 8;
+            } else {
+                damage *= 16;
             }
             
             if (ent.bar.greenwidth <= 0) {
